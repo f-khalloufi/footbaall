@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #414241; 
+    background-color: #004d00; 
     color: white;
     padding: 1rem;
     text-align: center;
@@ -103,7 +103,7 @@ nav ul li a:hover {
 
 .close-btn {
     background: #ffc107; 
-    color: #646664; 
+    color: #004d00; 
     border: none;
     font-size: 1.5rem;
     padding: 5px 10px;
@@ -161,7 +161,7 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #646664; 
+    background-color: #004d00; 
     color: #f7f7f7; 
     text-align: center;
     padding: 1rem;
@@ -182,51 +182,119 @@ footer {
     border-bottom: 1px solid #eee;
 }
 
-/* History Page Styles */
+/* Enhanced History Page Styles */
 .history-container {
     padding: 2rem;
-    margin-bottom: 60px;
+    margin: 20px auto 80px;
+    max-width: 1200px;
+}
+
+.timeline-entry {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-entry:hover {
+    transform: translateY(-5px);
 }
 
 .timeline-entry h3 {
-    color: #646664; 
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ffc107; 
-    padding-bottom: 0.5rem;
-}
-
-.timeline-entry h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
+    color: #004d00;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 0.8rem;
+    position: relative;
 }
 
 .career-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
     padding: 1rem 0;
+    scroll-behavior: smooth;
+}
+
+.career-timeline::-webkit-scrollbar {
+    height: 8px;
+}
+
+.career-timeline::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.career-timeline::-webkit-scrollbar-thumb {
+    background: #004d00;
+    border-radius: 4px;
 }
 
 .career-item {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 6px;
+    background: #ffffff;
+    min-width: 220px;
+    padding: 1.5rem;
+    border-radius: 10px;
     text-align: center;
-    height: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.career-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #ffc107;
+}
+
+.club-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #004d00;
+    padding: 3px;
 }
 
 .career-item h4 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+    color: #004d00;
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+    font-weight: 600;
 }
 
 .career-item p {
     color: #666;
+    font-size: 0.9rem;
+    background: #f8f9fa;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    display: inline-block;
 }
 
-/* View Details Button */
+@media (max-width: 768px) {
+    .history-container {
+        padding: 1rem;
+    }
+    
+    .timeline-entry {
+        padding: 1.5rem;
+    }
+    
+    .career-item {
+        min-width: 180px;
+    }
+    
+    .club-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 .details-btn {
     background-color: #646664; 
     color: white;
@@ -239,7 +307,7 @@ footer {
 }
 
 .details-btn:hover {
-    background-color: #646664; /* Darker green */
+    background-color: #006600; /* Darker green */
 }
 
 img{

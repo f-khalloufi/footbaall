@@ -44,7 +44,7 @@
             for (var i = 0; i < playersData.length; i++) {
                 if (playersData[i].id === playerId) {
                     player = playersData[i]
-                    break
+                    
                 }
             }
             
