@@ -2,10 +2,17 @@ $(document).ready(function() {
     function displayPlayers(players) {
         var container = $('#players-grid')
         container.empty()
+<<<<<<< HEAD
         
         for (var i = 0; i < players.length; i++) {
             var player = players[i]
             
+=======
+
+        for (var i = 0; i < players.length; i++) {
+            var player = players[i]
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
             var playerCard = $('<div>').addClass('player-card')
             var playerImage = $('<img>').attr({
                 'src': player.image,
@@ -30,13 +37,21 @@ $(document).ready(function() {
     $('#search-input').on('keyup', function() {
         var searchTerm = $(this).val().toLowerCase()
         var filteredPlayers = []
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
         for (var i = 0; i < playersData.length; i++) {
             if (playersData[i].name.toLowerCase().indexOf(searchTerm) !== -1) {
                 filteredPlayers.push(playersData[i])
             }
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
         displayPlayers(filteredPlayers)
     })
 
@@ -49,6 +64,7 @@ $(document).ready(function() {
                 break
             }
         }
+<<<<<<< HEAD
         
         var modalContent = $('#player-details')
         modalContent.empty() 
@@ -65,10 +81,28 @@ $(document).ready(function() {
         var careerTitle = document.createElement('h3')
         careerTitle.textContent = 'Career History'
         
+=======
+        var modalContent = $('#player-details')
+        modalContent.empty() 
+
+        var title = document.createElement('h2')
+        title.textContent = player.name
+
+        var age = document.createElement('p')
+        age.textContent = Age: ${player.age}
+
+        var nationality = document.createElement('p')
+        nationality.textContent = Nationality: ${player.nationality}
+
+        var careerTitle = document.createElement('h3')
+        careerTitle.textContent = 'Career History'
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
         var careerList = document.createElement('ul')
         for (let i = 0; i < player.careerHistory.length; i++) {
             var history = player.careerHistory[i]
             var li = document.createElement('li')
+<<<<<<< HEAD
             li.textContent = `${history.club} (${history.years})`
             careerList.appendChild(li)
         }
@@ -79,10 +113,23 @@ $(document).ready(function() {
         var trophySection = document.createElement('div')
         trophySection.className = 'trophy-section'
         
+=======
+            li.textContent = ${history.club} (${history.years})
+            careerList.appendChild(li)
+        }
+
+        var trophyTitle = document.createElement('h3')
+        trophyTitle.textContent = 'Trophies'
+
+        var trophySection = document.createElement('div')
+        trophySection.className = 'trophy-section'
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
         for (let i = 0; i < player.trophies.length; i++) {
             var trophy = player.trophies[i]
             var trophyItem = document.createElement('div')
             trophyItem.className = 'trophy-item'
+<<<<<<< HEAD
             
             var trophyName = document.createElement('h4')
             trophyName.textContent = trophy.name
@@ -115,6 +162,40 @@ $(document).ready(function() {
         videoContainer.appendChild(video)
         videoSection.append(videoTitle, videoContainer)
         
+=======
+
+            var trophyName = document.createElement('h4')
+            trophyName.textContent = trophy.name
+
+            var trophyCount = document.createElement('p')
+            trophyCount.textContent = Count: ${trophy.count}
+
+            trophyItem.append(trophyName, trophyCount)
+            trophySection.appendChild(trophyItem)
+        }
+
+        var videoSection = document.createElement('div')
+        videoSection.className = 'video-section'
+
+        var videoTitle = document.createElement('h3')
+        videoTitle.textContent = 'Career Highlights'
+
+        var videoContainer = document.createElement('div')
+        videoContainer.className = 'video-container'
+
+        var video = document.createElement('video')
+        video.controls = true
+        video.style.width = '100%'
+
+        var source = document.createElement('source')
+        source.src = player.videoUrl
+        source.type = 'video/mp4'
+
+        video.appendChild(source)
+        videoContainer.appendChild(video)
+        videoSection.append(videoTitle, videoContainer)
+
+>>>>>>> ad22705e9dc71de295f73d7d5936db13ab04d85f
         modalContent.append(
             title,
             age,
