@@ -11,14 +11,13 @@ body {
 }
 
 header {
-    background: #2c3e50;
+    background-color: #414241; 
     color: white;
     padding: 1rem;
     text-align: center;
     position: relative;
     z-index: 1000;
 }
-
 nav ul {
     list-style: none;
     padding: 1rem 0;
@@ -30,13 +29,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #f7f7f7; 
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #3498db;
+    color: #ffc107; 
 }
 
 #search-input {
@@ -98,21 +97,18 @@ nav ul li a:hover {
     max-width: 800px;
     border-radius: 8px;
     position: relative;
-    max-height: 90vh; /* Maximum height of 90% of viewport height */
-    overflow-y: auto; /* Enable scrolling for content */
+    max-height: 90vh; 
+    overflow-y: auto; 
 }
 
 .close-btn {
-    position: sticky;
-    top: 0;
-    right: 1rem;
-    float: right;
+    background: #ffc107; 
+    color: #646664; 
+    border: none;
     font-size: 1.5rem;
-    cursor: pointer;
-    background: white;
     padding: 5px 10px;
     border-radius: 50%;
-    z-index: 1002;
+    cursor: pointer;
 }
 
 #player-details {
@@ -165,16 +161,16 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #646664; 
+    color: #f7f7f7; 
     text-align: center;
     padding: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000;
+    
 }
-
 /* Career History Styles */
 #player-details ul {
     list-style: none;
@@ -186,31 +182,17 @@ footer {
     border-bottom: 1px solid #eee;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 10px auto;
-        padding: 1rem;
-    }
-
-    .trophy-section {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-}
-
 /* History Page Styles */
 .history-container {
     padding: 2rem;
     margin-bottom: 60px;
 }
 
-.timeline-entry {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.timeline-entry h3 {
+    color: #646664; 
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ffc107; 
+    padding-bottom: 0.5rem;
 }
 
 .timeline-entry h3 {
@@ -232,6 +214,7 @@ footer {
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
+    height: fit-content;
 }
 
 .career-item h4 {
@@ -245,7 +228,7 @@ footer {
 
 /* View Details Button */
 .details-btn {
-    background-color: #3498db;
+    background-color: #646664; 
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -256,5 +239,10 @@ footer {
 }
 
 .details-btn:hover {
-    background-color: #2980b9;
+    background-color: #646664; /* Darker green */
+}
+
+img{
+    width: 200px;
+    height: 200px;
 }

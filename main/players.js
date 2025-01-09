@@ -29,7 +29,7 @@ var playersData = [
     {
         id: 2,
         name: "Lionel Messi",
-        image: "../images/messi.jpg", 
+        image: "../images/messi/photo1.jpg",
         nationality: "Argentina",
         age: 37,
         position: "Forward",
@@ -50,7 +50,7 @@ var playersData = [
     {
         id: 3,
         name: "Neymar Jr",
-        image: "../images/neymar.jpg",
+        image: "../images/neymar/neymar.jpg",
         nationality: "Brazil",
         age: 32,
         position: "Forward",
