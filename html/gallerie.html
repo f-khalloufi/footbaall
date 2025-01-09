@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player World</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Top Players</h1>
+        <nav>
+            <ul>
+                <li><a href="gallerie.html" id="home-btn">Home</a></li>
+                <li><a href="historiques.html">History</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-input" placeholder="Search player by name...">
+    </header>
+
+    <main>
+        <div class="players-container" id="players-grid"></div>
+        
+        <div id="player-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="player-details"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Player World. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../main/players.js"></script>
+    <script src="../main/main.js"></script>
+</body>
+</html>
